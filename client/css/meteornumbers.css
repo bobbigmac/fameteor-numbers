@@ -1,0 +1,12 @@
+/* CSS declarations go here */
+body {
+	font-size:1.4em;
+	font-family: Arial, sans;
+	color: black;
+	font-weight: bold;
+}
+a {
+	/*color: white;*/
+	font-weight: bold;
+	font-size: 2em;
+}

@@ -1,0 +1,18 @@
+
+<template name="showNumbers">
+	{{>showNumber}}
+</template>
+
+<template name="showNumber">
+	{{#famous view='Scrollview' size="[undefined,undefined]" class="scroll-panel" }}
+		{{#famousEach numbers}}
+			{{>Surface numbers=this template="numberItem" size="[undefined,40]"}}
+		{{/famousEach}}
+	{{/famous}}
+</template>
+
+<template name="numberItem">
+	{{#each this}}
+		{{this.number}}
+	{{/each}}
+</template>
