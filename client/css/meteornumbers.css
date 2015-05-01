@@ -10,3 +10,9 @@ a {
 	font-weight: bold;
 	font-size: 2em;
 }
+.red {
+	background-color: red;
+}
+.yellow {
+	background-color: yellow;
+}

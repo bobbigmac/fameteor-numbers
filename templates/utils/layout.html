@@ -1,5 +1,20 @@
 <template name="layout">
 	{{#famousContext id='mainCtx'}}
-		{{>yield}}
+		{{#HeaderFooterLayout size="[undefined,undefined]" headerSize="100" footerSize="50" translate="[0,0,1]"}}
+			{{#Surface target="header" size="[undefined,100]"}}
+				Header
+			{{/Surface}}
+			
+			{{#ContainerSurface target="content" size="[undefined,undefined]" overflow="hidden"}}
+				{{#Scrollview size="[undefined,undefined]" translate="[0,100,0]"}}
+					{{>yield}}
+				{{/Scrollview}}
+			{{/ContainerSurface}}
+			
+			<!-- Don't know why but this refuses to layout AFTER the ContainerSurface (it should) -->
+			<!-- {{#Surface target="footer" size="[undefined,50]" class="red"}}
+				Footer
+			{{/Surface}} -->
+		{{/HeaderFooterLayout}}
 	{{/famousContext}}
 </template>

@@ -4,11 +4,11 @@
 </template>
 
 <template name="showNumber">
-	{{#famous view='Scrollview' size="[undefined,undefined]" class="scroll-panel" }}
-		{{#famousEach numbers}}
-			{{>Surface numbers=this template="numberItem" size="[undefined,40]" modifier="StateModifier"}}
-		{{/famousEach}}
-	{{/famous}}
+	<!-- {{#SequentialLayout}} -->
+	{{#famousEach numbers}}
+		{{>Surface numbers=this template="numberItem" size="[undefined,40]" modifier="StateModifier" class="yellow"}}
+	{{/famousEach}}
+	<!-- {{/SequentialLayout}} -->
 </template>
 
 <template name="numberItem">
