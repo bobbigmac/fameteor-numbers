@@ -1,6 +1,6 @@
 //https://github.com/JonnyBGod/famous-infinitescroll (with some modfications)
 
-FView.registerView("InfiniteScrollView", function(require, exports, module) {
+/*FView.registerView("InfiniteScrollView", function(require, exports, module) {
     var ScrollView = require('famous/views/Scrollview');
 
     function InfiniteScrollView(options) {
@@ -69,4 +69,4 @@ FView.registerView("InfiniteScrollView", function(require, exports, module) {
 	        },
 	    });
     }
-});
+});*/

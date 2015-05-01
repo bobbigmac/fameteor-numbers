@@ -6,13 +6,13 @@
 <template name="showNumber">
 	{{#famous view='Scrollview' size="[undefined,undefined]" class="scroll-panel" }}
 		{{#famousEach numbers}}
-			{{>Surface numbers=this template="numberItem" size="[undefined,40]"}}
+			{{>Surface numbers=this template="numberItem" size="[undefined,40]" modifier="StateModifier"}}
 		{{/famousEach}}
 	{{/famous}}
 </template>
 
 <template name="numberItem">
 	{{#each this}}
-		{{this.number}}
+		<span>{{this.number}}</span>
 	{{/each}}
 </template>
