@@ -19,7 +19,7 @@ Template.numberItem.events({
 	},
 	'mouseover': function(event, tpl) {
 		var fview = FView.from(tpl);
-		
+
 		// Set origin to center, and align middle left
 		//fview.modifier.setScale(2);
 		//fview.modifier.setOpacity(0.2, spring);

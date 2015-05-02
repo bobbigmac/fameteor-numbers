@@ -5,9 +5,9 @@
 
 <template name="showNumber">
 	<!-- {{#SequentialLayout}} -->
-	{{#famousEach numbers}}
+	{{#each numbers}}
 		{{>Surface numbers=this template="numberItem" size="[undefined,40]" modifier="StateModifier" class="yellow"}}
-	{{/famousEach}}
+	{{/each}}
 	<!-- {{/SequentialLayout}} -->
 </template>
 

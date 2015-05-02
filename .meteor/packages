@@ -8,3 +8,4 @@ meteor-platform
 iron:router
 gadicohen:famous-views
 mjn:famous
+gadicohen:fview-flex

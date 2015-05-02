@@ -11,17 +11,33 @@
 				Footer
 			{{/Surface}}
 		{{/HeaderFooterLayout}} -->
-		{{#HeaderFooterLayout direction="Y" size="[undefined,undefined]" translate="[0,0,1]" headerSize="100" footerSize="50"}}
+
+
+		{{#FlexLayoutController layout='HeaderFooterLayout' direction="X" layoutOptions=layoutOptions}}
+		  {{#Surface target="header" size="[undefined, 40]"}}
+		  	Header
+		  {{/Surface}}
+		  <!-- {{#ContainerSurface size="[undefined,undefined]" target="content"}} -->
+			{{#Scrollview size="[undefined,undefined]" target="content"}}
+				{{>yield}}
+			{{/Scrollview}}
+		  <!-- {{/ContainerSurface}} -->
+		  {{#Surface target="footer" size="[undefined, 80]"}}
+		  	Footer
+		  {{/Surface}}
+		{{/FlexLayoutController}}
+
+		<!-- {{#HeaderFooterLayout direction="Y" size="[undefined,undefined]" translate="[0,0,1]" headerSize="100" footerSize="50"}}
 			{{#Surface target="header" size="[undefined,100]"}}
 				Header
 			{{/Surface}}
 			
-			{{#ContainerSurface target="content" size="[undefined,undefined]" translate="[0,100,0]" overflow="hidden"}}
+			{{#ContainerSurface target="content" size="[undefined,undefined]" translate="[0,100,0]"}}
 				{{#Scrollview size="[undefined,undefined]"}}
 					{{>yield}}
 				{{/Scrollview}}
 			{{/ContainerSurface}}
-		{{/HeaderFooterLayout}}
+		{{/HeaderFooterLayout}} -->
 			
 			<!-- Don't know why but this refuses to layout AFTER the ContainerSurface (it should) -->
 			<!-- origin="[0.5,1]" align="[0.5,1]" -->
