@@ -1,20 +1,32 @@
 <template name="layout">
-	{{#famousContext id='mainCtx'}}
-		{{#HeaderFooterLayout size="[undefined,undefined]" headerSize="100" footerSize="50" translate="[0,0,1]"}}
+	{{#famousContext}}
+		<!-- {{#HeaderFooterLayout size="[500,200]" headerSize="50" footerSize="50"}}
+			{{#Surface target="header" class="red-bg"}}
+				Header
+			{{/Surface}}
+			{{#Surface target="content" class="blue-bg" size=heightHack}}
+				Content
+			{{/Surface}}
+			{{#Surface target="footer" class="green-bg"}}
+				Footer
+			{{/Surface}}
+		{{/HeaderFooterLayout}} -->
+		{{#HeaderFooterLayout direction="Y" size="[undefined,undefined]" translate="[0,0,1]" headerSize="100" footerSize="50"}}
 			{{#Surface target="header" size="[undefined,100]"}}
 				Header
 			{{/Surface}}
 			
-			{{#ContainerSurface target="content" size="[undefined,undefined]" overflow="hidden"}}
-				{{#Scrollview size="[undefined,undefined]" translate="[0,100,0]"}}
+			{{#ContainerSurface target="content" size="[undefined,undefined]" translate="[0,100,0]" overflow="hidden"}}
+				{{#Scrollview size="[undefined,undefined]"}}
 					{{>yield}}
 				{{/Scrollview}}
 			{{/ContainerSurface}}
+		{{/HeaderFooterLayout}}
 			
 			<!-- Don't know why but this refuses to layout AFTER the ContainerSurface (it should) -->
+			<!-- origin="[0.5,1]" align="[0.5,1]" -->
 			<!-- {{#Surface target="footer" size="[undefined,50]" class="red"}}
 				Footer
 			{{/Surface}} -->
-		{{/HeaderFooterLayout}}
 	{{/famousContext}}
 </template>

@@ -1,6 +1,15 @@
 
 Logger.setLevel('famous-views', 'info');
 
+Template.layout.helpers({
+	heightHack: function() {
+		var lineHeight = (window.innerHeight - 150);// + 'px';
+		console.log(lineHeight);
+		return [undefined,lineHeight];
+		//return [undefined,lineHeight];
+	}
+});
+
 /*
 Transform=null, Transitionable=null, Surface=null;
 famousCmp.mainCtx = false;
