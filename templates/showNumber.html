@@ -5,14 +5,14 @@
 
 <template name="showNumber">
 	<!-- {{#SequentialLayout}} -->
-	{{#each numbers}}
+	{{#famousEach numbers}}
 		{{>Surface numbers=this template="numberItem" size="[undefined,40]" modifier="StateModifier" class="yellow"}}
-	{{/each}}
+	{{/famousEach}}
 	<!-- {{/SequentialLayout}} -->
 </template>
 
 <template name="numberItem">
 	{{#each this}}
-		<span>{{this.number}}</span>
+		<span class="number-box">{{this.number}}</span>
 	{{/each}}
 </template>
