@@ -23,7 +23,7 @@ Template.numberItem.events({
 		// Set origin to center, and align middle left
 		//fview.modifier.setScale(2);
 		//fview.modifier.setOpacity(0.2, spring);
-		var trans = Transform.scale(2, 2, 2);
+		var trans = Transform.scale(1, 2, 2);
 		fview.modifier.setTransform(trans, spring);
 	},
 	'click': function(event, tpl) {

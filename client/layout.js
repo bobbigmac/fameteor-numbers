@@ -3,8 +3,8 @@ Template.layout.helpers({
 	'layoutOptions': function() {
 		return {
   			//margins: [10, 10, 10, 10],
-  			itemSize: 40,//[90,90],
-  			diameter: 400,
+  			itemSize: 100,//[90,90],
+  			diameter: 2000,
   			radialOpacity: 1
 		};
 	}
