@@ -5,7 +5,16 @@
 
 <template name="showNumber">
 	{{#famousEach numbers}}
-		{{>Surface numbers=this template="numberItem" size="[undefined,100]" modifier="StateModifier" class="yellow" align="[0.5,0.5]" origin="[0.5,0.5]"}}
+		{{> Surface 
+			numbers=this 
+			template="numberItem" 
+			size="[undefined,undefined]" 
+			transition=spring 
+			modifier="StateModifier" 
+			transform=hoverTransform 
+			class="yellow" 
+			align="[0.5,0.5]" 
+			origin="[0.5,0.5]"}}
 	{{/famousEach}}
 </template>
 

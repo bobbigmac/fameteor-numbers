@@ -1,52 +1,12 @@
 <template name="layout">
 	{{#famousContext}}
-		<!-- {{#HeaderFooterLayout size="[500,200]" headerSize="50" footerSize="50"}}
-			{{#Surface target="header" class="red-bg"}}
-				Header
-			{{/Surface}}
-			{{#Surface target="content" class="blue-bg" size=heightHack}}
-				Content
-			{{/Surface}}
-			{{#Surface target="footer" class="green-bg"}}
-				Footer
-			{{/Surface}}
-		{{/HeaderFooterLayout}} -->
-
-
-		{{#ContainerSurface target="content" size="[undefined,undefined]" perspective="200"}}
-			{{#FlexScrollView layout='WheelLayout' direction="X" layoutOptions=layoutOptions}}
-				{{>yield}}
+			<!-- {{#RenderController}} -->
+		{{#ContainerSurface target="content" size="[undefined,undefined]" perspective="1200"}}
+			{{#FlexScrollView layout="CollectionLayout" direction="Y" layoutOptions=layoutOptions}}
+				<!-- {{#Surface isSection="true"}}Hello{{/Surface}} -->
+				{{> yield}}
 			{{/FlexScrollView}}
 		{{/ContainerSurface}}
-<!-- 
-		{{#FlexLayoutController layout='HeaderFooterLayout' direction="X" layoutOptions=layoutOptions}}
-		  {{#Surface target="header" size="[undefined, 40]"}}
-		  	Header
-		  {{/Surface}}
-			{{#Scrollview size="[undefined,undefined]" target="content"}}
-				{{>yield}}
-			{{/Scrollview}}
-		  {{#Surface target="footer" size="[undefined, 80]"}}
-		  	Footer
-		  {{/Surface}}
-		{{/FlexLayoutController}} -->
-
-		<!-- {{#HeaderFooterLayout direction="Y" size="[undefined,undefined]" translate="[0,0,1]" headerSize="100" footerSize="50"}}
-			{{#Surface target="header" size="[undefined,100]"}}
-				Header
-			{{/Surface}}
-			
-			{{#ContainerSurface target="content" size="[undefined,undefined]" translate="[0,100,0]"}}
-				{{#Scrollview size="[undefined,undefined]"}}
-					{{>yield}}
-				{{/Scrollview}}
-			{{/ContainerSurface}}
-		{{/HeaderFooterLayout}} -->
-			
-			<!-- Don't know why but this refuses to layout AFTER the ContainerSurface (it should) -->
-			<!-- origin="[0.5,1]" align="[0.5,1]" -->
-			<!-- {{#Surface target="footer" size="[undefined,50]" class="red"}}
-				Footer
-			{{/Surface}} -->
+			<!-- {{/RenderController}} -->
 	{{/famousContext}}
 </template>
